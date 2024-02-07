@@ -135,6 +135,12 @@ class _HomeState extends State<Home> {
     todoController.clear();
   }
 
+  void _addImage(String image) {
+    setState(() {
+      todosList.add(ToDo(imagePath: image));
+    });
+  }
+
   void _runFilter(String enteredKeyword) {
     List<ToDo> results = [];
     if (enteredKeyword.isEmpty) {
